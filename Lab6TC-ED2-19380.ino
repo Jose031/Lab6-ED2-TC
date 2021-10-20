@@ -57,3 +57,11 @@ void setup()
 //**********************************************************************************************************************
 // Fuinciones
 //**********************************************************************************************************************
+void voltaje1(void) // Voltaje potenciometro 2
+{
+  if (Serial3.available() > 0) // Condición que permite verficar si hay bytes disponibles en el buffer de registro
+  {
+    voltaje = Serial3.readStringUntil('\n'); //Lectura de valor ADC enviado por el ESP32
+  }
+
+}
