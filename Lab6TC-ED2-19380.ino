@@ -87,3 +87,11 @@ void UPC(void) {
     }
   }
   Serial3.println(contador); //Forma de enviar el valor del contador al ESP32
+}
+void funcionamientoLEDS(void) {
+
+  analogWrite(ledR, voltaje.toInt());
+  analogWrite(ledV, voltajeB);
+  analogWrite(ledA, contador);
+
+}
