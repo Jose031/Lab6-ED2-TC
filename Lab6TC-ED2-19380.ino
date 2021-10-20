@@ -65,3 +65,25 @@ void voltaje1(void) // Voltaje potenciometro 2
   }
 
 }
+void voltaje2(void) // Voltaje potenciometro 2
+{
+  voltajeB = analogRead(pot2);
+  Serial3.println(analogRead(pot2));//Forma de enviar el valor ADC de la tiva c al ESP32
+  delay(100);
+}
+void UPC(void) {
+  if (digitalRead(btn1) == 0) { //Condicion que permite aumentar el valor DEL contador
+    contador++;
+    if (contador > 255)
+    { // Condición que establece que el contador no se mayor al numero de condiciones que se tiene.
+      contador = 0;
+    }
+  }
+  if (digitalRead(btn2) == 0) { //Condicion que permite decrementar el valor del contador 
+    contador--;
+    if (contador < 0)
+    { // Condición que establece que el contador no se mayor al numero de condiciones que se tiene.
+      contador = 0;
+    }
+  }
+  Serial3.println(contador); //Forma de enviar el valor del contador al ESP32
