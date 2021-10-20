@@ -95,3 +95,14 @@ void funcionamientoLEDS(void) {
   analogWrite(ledA, contador);
 
 }
+void USART(void) {
+  //Impresion monitor 
+  Serial.println("****************");
+  Serial.print("Rojo:");
+  Serial.println(voltaje);
+  Serial.print("Verde:");
+  Serial.println(voltajeB);
+  Serial.print("Azul:");
+  Serial.println(contador);
+  delay(250);
+}
