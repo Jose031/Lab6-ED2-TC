@@ -38,6 +38,18 @@ int contador = 0;
 //**********************************************************************************************************************
 // Configuracion
 //**********************************************************************************************************************
+void setup()
+{
+  // Velocidad a la que trabaja la comunicación serial
+  Serial.begin(115200);
+  Serial3.begin(115200);
+  //Definicion de entradas
+  pinMode(btn1, INPUT_PULLUP);
+  pinMode(btn2, INPUT_PULLUP);
+  pinMode(ledR, OUTPUT);
+  pinMode(ledV, OUTPUT);
+  pinMode(ledA, OUTPUT);
+
 }
 //**********************************************************************************************************************
 // LOOP
